@@ -1,0 +1,212 @@
+student@206-1 MINGW64 /d/CSE_B 565
+$  git init
+Initialized empty Git repository in D:/CSE_B 565/.git/
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        one.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git add one.html
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   one.html
+
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git config --global user.email "akanksha04jha@gmail.com"
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git config --global user.name "akankshaa-jha"
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git commit -m "one file is added"
+[master (root-commit) 0254486] one file is added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 one.html
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git remote add origin https://github.com/akankshaa-jha/CSE_B-565.git
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git push -u origin master
+remote: Permission to akankshaa-jha/CSE_B-565.git denied to alsolens.
+fatal: unable to access 'https://github.com/akankshaa-jha/CSE_B-565.git/': The requested URL returned error: 403
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 379 bytes | 379.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/akankshaa-jha/CSE_B-565.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   one.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git add one.html
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   one.html
+
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git commit -m "h2 tag is added"
+[master 2c720f5] h2 tag is added
+ 1 file changed, 1 insertion(+)
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git push -u origin master
+To https://github.com/akankshaa-jha/CSE_B-565.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/akankshaa-jha/CSE_B-565.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git branch b1
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git log
+commit 2c720f5cabf3b2f6fd5888d9c01bd88adf6106eb (HEAD -> master, b1)
+Author: akankshaa-jha <akanksha04jha@gmail.com>
+Date:   Thu Feb 29 14:55:57 2024 +0530
+
+    h2 tag is added
+
+commit 0254486185dc5edc51d856320b0149fab1168b0d (origin/master)
+Author: akankshaa-jha <akanksha04jha@gmail.com>
+Date:   Thu Feb 29 14:25:26 2024 +0530
+
+    one file is added
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git branch
+  b1
+* master
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git branch
+* b1
+  master
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git status
+On branch b1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git add second.html
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git commit -m "second file is added"
+[b1 f649890] second file is added
+ 1 file changed, 12 insertions(+)
+ create mode 100644 second.html
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git push -u origin b1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 913 bytes | 913.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'b1' on GitHub by visiting:
+remote:      https://github.com/akankshaa-jha/CSE_B-565/pull/new/b1
+remote:
+To https://github.com/akankshaa-jha/CSE_B-565.git
+ * [new branch]      b1 -> b1
+branch 'b1' set up to track 'origin/b1'.
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git checkout b1
+Switched to branch 'b1'
+Your branch is up to date with 'origin/b1'.
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git branch -d "b1"
+error: cannot delete branch 'b1' used by worktree at 'D:/CSE_B 565'
+
+student@206-1 MINGW64 /d/CSE_B 565 (b1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git branch -d "b1"
+warning: deleting branch 'b1' that has been merged to
+         'refs/remotes/origin/b1', but not yet merged to HEAD
+Deleted branch b1 (was f649890).
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)
+$ git push origin --delete "b1"
+To https://github.com/akankshaa-jha/CSE_B-565.git
+ - [deleted]         b1
+
+student@206-1 MINGW64 /d/CSE_B 565 (master)

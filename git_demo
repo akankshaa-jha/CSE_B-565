@@ -210,3 +210,6 @@ To https://github.com/akankshaa-jha/CSE_B-565.git
  - [deleted]         b1
 
 student@206-1 MINGW64 /d/CSE_B 565 (master)
+git merge:
+$git checkout master(switch into branch you want to merge)
+$git merge b1 (b1 is branv=ch having files)
